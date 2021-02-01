@@ -2,7 +2,7 @@
 <ruleset
         name=""
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="./vendor/squizlabs/php_codesniffer/phpcs.xsd">
+        xsi:noNamespaceSchemaLocation="./vendor-bin/tools/vendor/squizlabs/php_codesniffer/phpcs.xsd">
 
     <arg name="basepath" value="."/>
     <arg name="extensions" value="php"/>
@@ -55,5 +55,10 @@
             <property name="maxLinesCountBeforeWithComment" value="1"/>
             <property name="maxLinesCountBeforeWithoutComment" value="0"/>
         </properties>
+    </rule>
+
+    <!-- Exclude rules -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>*/tests/*</exclude-pattern>
     </rule>
 </ruleset>
