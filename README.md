@@ -12,8 +12,8 @@ $ composer require --dev kenjis/phpunit-helper
 
 ## Usage
 
-- [TestDouble](#testdouble)
-- [ReflectionHelper](#reflectionhelper)
+- [TestDouble](#testdouble) ... Easy mock creation
+- [ReflectionHelper](#reflectionhelper) ... Easy private property/method testing
 
 ### `TestDouble`
 
