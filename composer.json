@@ -1,6 +1,9 @@
 {
     "name": "kenjis/phpunit-helper",
+    "type": "library",
     "description": "Provides helper traits for PHPUnit",
+    "keywords": ["phpunit","mock"],
+    "homepage": "https://github.com/kenjis/phpunit-helper",
     "license": "MIT",
     "authors": [
         {
