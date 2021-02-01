@@ -1,4 +1,4 @@
-# PHPUnit Heler
+# PHPUnit Helper
 
 Provides helper traits for PHPUnit.
 
