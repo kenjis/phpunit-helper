@@ -12,6 +12,9 @@ $ composer require --dev kenjis/phpunit-helper
 
 ## Usage
 
+- [TestDouble](#testdouble)
+- [ReflectionHelper](#reflectionhelper)
+
 ### `TestDouble`
 
 This trait provides helper methods to create mock objects and to verify invocations.
