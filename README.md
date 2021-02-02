@@ -2,18 +2,34 @@
 
 Provides helper traits for PHPUnit.
 
+- [TestDouble](#testdouble) ... Easy mock creation
+- [ReflectionHelper](#reflectionhelper) ... Easy private property/method testing
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+    * [TestDouble](#testdouble)
+        * [$this-&gt;getDouble()](#this-getdouble)
+        * [$this-&gt;verifyInvoked()](#this-verifyinvoked)
+        * [$this-&gt;verifyInvokedOnce()](#this-verifyinvokedonce)
+        * [$this-&gt;verifyInvokedMultipleTimes()](#this-verifyinvokedmultipletimes)
+        * [$this-&gt;verifyNeverInvoked()](#this-verifyneverinvoked)
+    * [ReflectionHelper](#reflectionhelper)
+        * [$this-&gt;getPrivateProperty()](#this-getprivateproperty)
+        * [$this-&gt;setPrivateProperty()](#this-setprivateproperty)
+        * [$this-&gt;getPrivateMethodInvoker()](#this-getprivatemethodinvoker)
+* [License](#license)
+
 ## Installation
 
-Run
+Run:
 
-```sh
+```sh-session
 $ composer require --dev kenjis/phpunit-helper
 ```
 
 ## Usage
-
-- [TestDouble](#testdouble) ... Easy mock creation
-- [ReflectionHelper](#reflectionhelper) ... Easy private property/method testing
 
 ### `TestDouble`
 
@@ -131,7 +147,7 @@ $this->verifyInvoked(
     $loader,
     'view',
     [
-        'shopConfirm', $this->anything(), TRUE
+        'shopConfirm', $this->anything(), true
     ]
 );
 ```
@@ -312,3 +328,9 @@ $this->assertEquals(
 	'return value of the privateMethod() method', $method()
 );
 ~~~
+
+## License
+
+This package is licensed using the MIT License.
+
+Please have a look at [`LICENSE`](LICENSE).
