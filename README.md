@@ -7,6 +7,7 @@ Provides helper traits for PHPUnit.
 
 ## Table of Contents
 
+* [Requirements](#requirements)
 * [Installation](#installation)
 * [Usage](#usage)
     * [TestDouble](#testdouble)
@@ -20,6 +21,10 @@ Provides helper traits for PHPUnit.
         * [$this-&gt;setPrivateProperty()](#this-setprivateproperty)
         * [$this-&gt;getPrivateMethodInvoker()](#this-getprivatemethodinvoker)
 * [License](#license)
+
+## Requirements
+
+- PHP 7.2 or later
 
 ## Installation
 
