@@ -80,6 +80,10 @@ trait ReflectionHelper
     {
         $refProperty = self::getAccessibleRefProperty($obj, $property);
 
-        return $refProperty->getValue($obj);
+        if (is_object($obj)) {
+            return $refProperty->getValue($obj);
+        }
+
+        return $refProperty->getValue();
     }
 }
