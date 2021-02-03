@@ -24,7 +24,7 @@ Provides helper traits for PHPUnit.
 
 ## Requirements
 
-- PHP 7.2 or later
+- PHP 7.3 or later
 
 ## Installation
 
