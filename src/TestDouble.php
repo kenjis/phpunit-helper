@@ -34,6 +34,8 @@ trait TestDouble
      * @param bool|array<mixed>                 $constructorParams false: disable constructor, array: constructor params
      *
      * @return mixed PHPUnit mock object
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function getDouble(
         string $classname,
