@@ -7,20 +7,25 @@ Provides helper traits for PHPUnit.
 
 ## Table of Contents
 
-* [Requirements](#requirements)
-* [Installation](#installation)
-* [Usage](#usage)
-    * [TestDouble](#testdouble)
-        * [$this-&gt;getDouble()](#this-getdouble)
-        * [$this-&gt;verifyInvoked()](#this-verifyinvoked)
-        * [$this-&gt;verifyInvokedOnce()](#this-verifyinvokedonce)
-        * [$this-&gt;verifyInvokedMultipleTimes()](#this-verifyinvokedmultipletimes)
-        * [$this-&gt;verifyNeverInvoked()](#this-verifyneverinvoked)
-    * [ReflectionHelper](#reflectionhelper)
-        * [$this-&gt;getPrivateProperty()](#this-getprivateproperty)
-        * [$this-&gt;setPrivateProperty()](#this-setprivateproperty)
-        * [$this-&gt;getPrivateMethodInvoker()](#this-getprivatemethodinvoker)
-* [License](#license)
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [`TestDouble`](#testdouble)
+    - [`$this->getDouble()`](#this-getdouble)
+    - [`$this->verifyInvoked()`](#this-verifyinvoked)
+    - [`$this->verifyInvokedOnce()`](#this-verifyinvokedonce)
+    - [`$this->verifyInvokedMultipleTimes()`](#this-verifyinvokedmultipletimes)
+    - [`$this->verifyNeverInvoked()`](#this-verifyneverinvoked)
+  - [`ReflectionHelper`](#reflectionhelper)
+    - [`$this->getPrivateProperty()`](#this-getprivateproperty)
+    - [`$this->setPrivateProperty()`](#this-setprivateproperty)
+    - [`$this->getPrivateMethodInvoker()`](#this-getprivatemethodinvoker)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Requirements
 
