@@ -23,6 +23,7 @@ Provides helper traits for PHPUnit.
     - [`$this->getPrivateProperty()`](#this-getprivateproperty)
     - [`$this->setPrivateProperty()`](#this-setprivateproperty)
     - [`$this->getPrivateMethodInvoker()`](#this-getprivatemethodinvoker)
+  - [`DebugHelper`](#debughelper)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
