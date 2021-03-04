@@ -10,9 +10,9 @@ declare(strict_types=1);
  * @SuppressWarnings(PHPMD.ExitExpression)
  * Does not work if I move to the function annotation
  * See https://github.com/phpmd/phpmd/issues/337
- * @codeCoverageIgnore Can't cover on codecov.io
  */
-if (! function_exists('dd')) {
+if (! function_exists('dd')) { // @codeCoverageIgnore
+
     /**
      * Alias of var_dump() and exit()
      *
@@ -28,10 +28,8 @@ if (! function_exists('dd')) {
     }
 }
 
-/**
- * @codeCoverageIgnore Can't cover on codecov.io
- */
-if (! function_exists('d')) {
+if (! function_exists('d')) { // @codeCoverageIgnore
+
     /**
      * Alias of var_dump()
      *
