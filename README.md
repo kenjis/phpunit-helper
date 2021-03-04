@@ -4,6 +4,7 @@ Provides helper traits for PHPUnit.
 
 - [TestDouble](#testdouble) ... Easy mock creation
 - [ReflectionHelper](#reflectionhelper) ... Easy private property/method testing
+- [DebugHelper](#debughelper) ... Helper function `dd()` and `d()`
 
 ## Table of Contents
 
