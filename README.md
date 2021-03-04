@@ -23,6 +23,7 @@ Provides helper traits for PHPUnit.
     - [`$this->getPrivateProperty()`](#this-getprivateproperty)
     - [`$this->setPrivateProperty()`](#this-setprivateproperty)
     - [`$this->getPrivateMethodInvoker()`](#this-getprivatemethodinvoker)
+  - [`DebugHelper`](#debughelper)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -338,6 +339,28 @@ $this->assertEquals(
 	'return value of the privateMethod() method', $method()
 );
 ~~~
+
+### `DebugHelper`
+
+This trait provides helper functions, `dd()` and `d()` to dump variables.
+
+Import the `Kenjis\PhpUnitHelper\DebugHelper` trait into your test class:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Foo\Bar\Test\Unit;
+
+use Kenjis\PhpUnitHelper\DebugHelper;
+use PHPUnit\Framework;
+
+final class BazTest extends Framework\TestCase
+{
+    use DebugHelper;
+}
+```
 
 ## License
 
