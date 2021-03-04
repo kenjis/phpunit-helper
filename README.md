@@ -339,6 +339,28 @@ $this->assertEquals(
 );
 ~~~
 
+### `DebugHelper`
+
+This trait provides helper functions, `dd()` and `d()` to dump variables.
+
+Import the `Kenjis\PhpUnitHelper\DebugHelper` trait into your test class:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Foo\Bar\Test\Unit;
+
+use Kenjis\PhpUnitHelper\DebugHelper;
+use PHPUnit\Framework;
+
+final class BazTest extends Framework\TestCase
+{
+    use DebugHelper;
+}
+```
+
 ## License
 
 This package is licensed using the MIT License.
