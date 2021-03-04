@@ -13,7 +13,7 @@ class DebugHelperTest extends TestCase
     public function test_d(): void
     {
         $this->expectOutputRegex(
-            '/string\(4\) "var1"\n.*\nint\(100\)\n/'
+            '/string\(4\) "var1"\n*.*\nint\(100\)\n/'
         );
 
         $var1 = 'var1';
