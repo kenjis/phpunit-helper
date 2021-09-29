@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Kenjis\PhpUnitHelper;
 
-class CI_Input
+class Input
 {
     public function method(bool $upper = false): string
     {
@@ -16,7 +16,7 @@ class CI_Input
      *
      * @return mixed
      */
-    public function get($index = null, bool $xss_clean = false)
+    public function get($index = null, bool $xssClean = false)
     {
         return 'GET value';
     }

@@ -14,7 +14,7 @@ class TestDoubleTest extends TestCase
     public function test_getDouble_method_named_method(): void
     {
         $expected = 'DELETE';
-        $mock = $this->getDouble(CI_Input::class, ['method' => $expected]);
+        $mock = $this->getDouble(Input::class, ['method' => $expected]);
 
         $actual = $mock->method();
 
@@ -25,7 +25,7 @@ class TestDoubleTest extends TestCase
     {
         $returns = ['GET', 'PUT', 'DELETE'];
         $mock = $this->getDouble(
-            CI_Input::class,
+            Input::class,
             [
                 ['method' => $returns],
             ]
@@ -45,7 +45,7 @@ class TestDoubleTest extends TestCase
     {
         $returns = ['GET', 'PUT', 'DELETE'];
         $mock = $this->getDouble(
-            CI_Input::class,
+            Input::class,
             [
                 'get' => [],
                 ['method' => $returns],
@@ -76,7 +76,7 @@ class TestDoubleTest extends TestCase
         $ret = static function ($param1, $param2): void {
             throw new RuntimeException('I can throw an exception and can use params: ' . $param1 . $param2);
         };
-        $mock = $this->getDouble(CI_Input::class, ['method' => $ret]);
+        $mock = $this->getDouble(Input::class, ['method' => $ret]);
 
         $mock->method();
     }
@@ -97,7 +97,7 @@ class TestDoubleTest extends TestCase
 
     public function test_getDobule_method_returns_phpunit_stub(): void
     {
-        $mock = $this->getDouble(CI_Email::class, ['to' => $this->returnSelf()]);
+        $mock = $this->getDouble(Email::class, ['to' => $this->returnSelf()]);
         $test = $mock->to('test@example.com');
 
         $this->assertEquals($mock, $test);
@@ -106,7 +106,7 @@ class TestDoubleTest extends TestCase
     public function test_verifyInvokedOnce_with_params(): void
     {
         $expected = 'DELETE';
-        $mock = $this->getDouble(CI_Input::class, ['method' => $expected]);
+        $mock = $this->getDouble(Input::class, ['method' => $expected]);
 
         $this->verifyInvokedOnce($mock, 'method', [true]);
 
@@ -116,7 +116,7 @@ class TestDoubleTest extends TestCase
     public function test_verifyInvokedOnce_without_params(): void
     {
         $expected = 'DELETE';
-        $mock = $this->getDouble(CI_Input::class, ['method' => $expected]);
+        $mock = $this->getDouble(Input::class, ['method' => $expected]);
 
         $this->verifyInvokedOnce($mock, 'method');
 
@@ -126,7 +126,7 @@ class TestDoubleTest extends TestCase
     public function test_verifyInvoked_once(): void
     {
         $expected = 'DELETE';
-        $mock = $this->getDouble(CI_Input::class, ['method' => $expected]);
+        $mock = $this->getDouble(Input::class, ['method' => $expected]);
 
         $this->verifyInvoked($mock, 'method');
 
@@ -136,7 +136,7 @@ class TestDoubleTest extends TestCase
     public function test_verifyInvoked_twice(): void
     {
         $expected = 'DELETE';
-        $mock = $this->getDouble(CI_Input::class, ['method' => $expected]);
+        $mock = $this->getDouble(Input::class, ['method' => $expected]);
 
         $this->verifyInvoked($mock, 'method');
 
@@ -147,7 +147,7 @@ class TestDoubleTest extends TestCase
     public function test_verifyInvokedMultipleTimes(): void
     {
         $expected = 'DELETE';
-        $mock = $this->getDouble(CI_Input::class, ['method' => $expected]);
+        $mock = $this->getDouble(Input::class, ['method' => $expected]);
 
         $this->verifyInvokedMultipleTimes($mock, 'method', 3);
 
@@ -159,7 +159,7 @@ class TestDoubleTest extends TestCase
     public function test_verifyNeverInvoked(): void
     {
         $expected = 'DELETE';
-        $mock = $this->getDouble(CI_Input::class, ['method' => $expected]);
+        $mock = $this->getDouble(Input::class, ['method' => $expected]);
 
         $this->verifyNeverInvoked($mock, 'method');
     }
