@@ -6,14 +6,10 @@ namespace Kenjis\PhpUnitHelper;
 
 class ForReflectionHelper
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     private $private = 'secret';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private static $staticPrivate = 'xyz';
 
     public function getPrivate(): string
@@ -31,7 +27,7 @@ class ForReflectionHelper
         return 'private ' . $param1 . $param2;
     }
 
-    private static function privateStaticMethod(string $param1, string$param2): string
+    private static function privateStaticMethod(string $param1, string $param2): string
     {
         return 'private_static ' . $param1 . $param2;
     }

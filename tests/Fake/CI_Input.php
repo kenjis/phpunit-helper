@@ -6,8 +6,8 @@ namespace Kenjis\PhpUnitHelper;
 
 class CI_Input
 {
-   public function method(): string
-   {
-       return 'GET';
-   }
+    public function method(): string
+    {
+        return 'GET';
+    }
 }
