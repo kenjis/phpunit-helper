@@ -81,7 +81,7 @@ Gets PHPUnit mock object.
 ```php
 $email = $this->getMockBuilder(CI_Email::class)
     ->disableOriginalConstructor()
-    ->setMethods(['send'])
+    ->onlyMethods(['send'])
     ->getMock();
 $email->method('send')
     ->willReturn(true);
@@ -117,7 +117,7 @@ You can create mocks with consecutive calls.
 ```php
 $mock = $this->getMockBuilder(CI_Email::class)
     ->disableOriginalConstructor()
-    ->setMethods(['method'])
+    ->onlyMethods(['method'])
     ->getMock();
 $mock->expects($this->any())->method('method')
     ->will($this->onConsecutiveCalls('GET', 'POST' ,'DELETE'));
