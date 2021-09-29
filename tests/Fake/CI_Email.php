@@ -6,4 +6,8 @@ namespace Kenjis\PhpUnitHelper;
 
 class CI_Email
 {
+    public function to(string $to): CI_Email
+    {
+        return $this;
+    }
 }

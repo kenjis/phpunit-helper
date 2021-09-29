@@ -78,7 +78,7 @@ class TestDoubleTest extends TestCase
         };
         $mock = $this->getDouble(CI_Input::class, ['method' => $ret]);
 
-        $mock->method('abc', 'def');
+        $mock->method();
     }
 
     public function test_getDouble_constructor_param(): void
