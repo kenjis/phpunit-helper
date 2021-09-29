@@ -71,14 +71,19 @@ class TestDoubleTest extends TestCase
     public function test_getDouble_method_returns_execption(): void
     {
         $this->expectException(RuntimeException::class);
-        $this->expectExceptionMessage('I can throw an exception and can use params: abcdef');
+        $this->expectExceptionMessage(
+            'I can throw an exception and can use params: abc1'
+        );
 
         $ret = static function ($param1, $param2): void {
-            throw new RuntimeException('I can throw an exception and can use params: ' . $param1 . $param2);
+            throw new RuntimeException(
+                'I can throw an exception and can use params: '
+                . $param1 . $param2
+            );
         };
-        $mock = $this->getDouble(Input::class, ['method' => $ret]);
+        $mock = $this->getDouble(Input::class, ['get' => $ret]);
 
-        $mock->method();
+        $mock->get('abc', true);
     }
 
     public function test_getDouble_constructor_param(): void
