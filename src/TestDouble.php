@@ -21,7 +21,7 @@ trait TestDouble
      *
      * $email = $this->getMockBuilder('CI_Email')
      *    ->disableOriginalConstructor()
-     *    ->setMethods(['send'])
+     *    ->onlyMethods(['send'])
      *    ->getMock();
      * $email->method('send')->willReturn(true);
      *
@@ -67,7 +67,7 @@ trait TestDouble
             }
         }
 
-        $mock = $mockBuilder->setMethods($methods)->getMock();
+        $mock = $mockBuilder->onlyMethods($methods)->getMock();
 
         foreach ($onConsecutiveCalls as $method => $returns) {
             $mock->expects($this->any())->method($method)
