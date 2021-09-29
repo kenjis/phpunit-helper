@@ -15,6 +15,7 @@ on:
       - 'src/**'
       - 'tests/**'
       - phpcs.xml
+      - '.github/workflows/**'
   workflow_dispatch:
 
 jobs:
@@ -45,7 +46,7 @@ jobs:
           restore-keys: ${{ runner.os }}-composer-
 
       - name: Install dependencies
-        run: composer install --no-interaction --no-progress --prefer-dist
+        run: composer update --no-interaction --no-progress --prefer-dist
 
       - name: Validate composer.json
         run: composer validate --strict
