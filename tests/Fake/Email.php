@@ -10,4 +10,8 @@ class Email
     {
         return $this;
     }
+
+    public function batch_bcc_send(): void
+    {
+    }
 }
