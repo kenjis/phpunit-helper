@@ -53,19 +53,7 @@ trait TestDouble
             $mockBuilder->setConstructorArgs($constructorParams);
         }
 
-        $methods = [];
-        $onConsecutiveCalls = [];
-        $otherCalls = [];
-
-        foreach ($params as $key => $val) {
-            if (is_int($key)) {
-                $onConsecutiveCalls = array_merge($onConsecutiveCalls, $val);
-                $methods[] = array_keys($val)[0];
-            } else {
-                $otherCalls[$key] = $val;
-                $methods[] = $key;
-            }
-        }
+        [$onConsecutiveCalls, $otherCalls, $methods] = $this->processParams($params);
 
         if ($methods === []) {
             $mock = $mockBuilder->getMock();
@@ -101,6 +89,30 @@ trait TestDouble
         }
 
         return $mock;
+    }
+
+    /**
+     * @param array<string, mixed>|array<array> $params [method_name => return_value]
+     *
+     * @return array{0: array<string, array<string>>, 1: array<string, mixed>, 2: string[]}
+     */
+    private function processParams(array $params): array
+    {
+        $onConsecutiveCalls = [];
+        $otherCalls = [];
+        $methods = [];
+
+        foreach ($params as $key => $val) {
+            if (is_int($key)) {
+                $onConsecutiveCalls = array_merge($onConsecutiveCalls, $val);
+                $methods[] = array_keys($val)[0];
+            } else {
+                $otherCalls[$key] = $val;
+                $methods[] = $key;
+            }
+        }
+
+        return [$onConsecutiveCalls, $otherCalls, $methods];
     }
 
     /**
