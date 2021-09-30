@@ -168,4 +168,12 @@ class TestDoubleTest extends TestCase
 
         $this->verifyNeverInvoked($mock, 'method');
     }
+
+    public function test_create_mock_with_no_params_and_verifyInvokedOnce(): void
+    {
+        $mock = $this->getDouble(Email::class, []);
+        $this->verifyInvokedOnce($mock, 'batch_bcc_send');
+
+        $mock->batch_bcc_send();
+    }
 }

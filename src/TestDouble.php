@@ -67,7 +67,11 @@ trait TestDouble
             }
         }
 
-        $mock = $mockBuilder->onlyMethods($methods)->getMock();
+        if ($methods === []) {
+            $mock = $mockBuilder->getMock();
+        } else {
+            $mock = $mockBuilder->onlyMethods($methods)->getMock();
+        }
 
         foreach ($onConsecutiveCalls as $method => $returns) {
             $mock->expects($this->any())->method($method)
